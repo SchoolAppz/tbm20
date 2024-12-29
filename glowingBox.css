@@ -1,0 +1,90 @@
+.glowing-box {
+    position: relative;
+    padding: 4px;
+    border-radius: 10px;
+    background: transparent;
+    overflow: hidden;
+    min-width: 300px;
+    z-index: 1;
+}
+
+.glowing-box::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        var(--accent-blue) 0%,
+        var(--secondary-blue) 25%,
+        transparent 50%
+    );
+    opacity: 0.1;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.glowing-box:hover::before {
+    opacity: 0.3;
+}
+
+.glowing-box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 3px solid transparent;
+    background: linear-gradient(
+        to right,
+        var(--secondary-blue),
+        var(--accent-blue)
+    ) border-box;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+.glowing-box-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    border-radius: 8px;
+    background: rgba(26, 35, 126, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.glow {
+    position: absolute;
+    inset: -1px;
+    border-radius: 9px;
+    pointer-events: none;
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        var(--accent-blue) 0%,
+        transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+    mix-blend-mode: screen;
+    z-index: 0;
+}
+
+.glowing-box:hover .glow {
+    opacity: 0.8;
+}
+
+/* Add responsive styles */
+@media screen and (max-width: 768px) {
+    .glowing-box {
+        margin: 0 1rem;
+    }
+    
+    .glowing-box-content {
+        padding: 1.5rem;
+    }
+} 

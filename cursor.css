@@ -1,0 +1,85 @@
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--secondary-blue);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    will-change: transform;
+    transform-origin: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.cursor-follower {
+    width: 16px;
+    height: 16px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    mix-blend-mode: difference;
+    will-change: transform;
+    opacity: 0.8;
+    transform-origin: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* Hide default cursor */
+* {
+    cursor: none !important;
+}
+
+/* Show default cursor on interactive elements */
+a, button, input, textarea, [role="button"] {
+    cursor: none !important;
+}
+
+/* Cursor hover states */
+a:hover ~ .cursor,
+button:hover ~ .cursor,
+[role="button"]:hover ~ .cursor {
+    transform: scale(1.5) !important;
+}
+
+/* Hide on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .cursor,
+    .cursor-follower {
+        display: none !important;
+    }
+    
+    * {
+        cursor: auto !important;
+    }
+}
+
+/* Optimize performance */
+.cursor, .cursor-follower {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transform-origin: 50% 50%;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease;
+}
+
+/* Trackpad-specific styles */
+@media (hover: none) {
+    .cursor-follower {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+/* Ensure cursor stays within viewport */
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    overscroll-behavior-y: none;
+} 

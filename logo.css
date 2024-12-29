@@ -1,0 +1,28 @@
+.logo-container {
+    display: inline-flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.logo-text {
+    background: linear-gradient(
+        to right,
+        var(--secondary-blue),
+        var(--accent-blue)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-right: 0.5rem;
+}
+
+.blink {
+    color: var(--accent-blue);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+} 

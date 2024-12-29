@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBM - Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="logo">TBM<span class="blink">_</span></div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="bubble bubble-hero"></div>
+        <div class="text-box text-box-hero">
+            <div class="typing-wrapper">
+                <p class="subtitle-typing"></p>
+                <p class="subtitle-desc"></p>
+            </div>
+        </div>
+        <div class="glitch-container">
+            <h1 class="glitch" data-text="Hello, I'm TBM">Hello, I'm TBM</h1>
+        </div>
+        <div class="typing-container">
+            <p>I'm a <span class="typing"></span></p>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <section id="projects" class="section hidden first-section">
+        <div class="content-wrapper">
+            <div class="bubble bubble-projects"></div>
+            <div class="text-box text-box-projects">
+                <h3>Featured Work</h3>
+                <p>A collection of my best projects</p>
+                <p>Each built with passion and attention to detail</p>
+                <div class="hover-indicator">
+                    <div class="hover-mouse"></div>
+                    <p>Hover to View Projects</p>
+                </div>
+                <div class="projects-list">
+                    <div class="project-item" style="--order: 0;">
+                        <h4>Discord Bot</h4>
+                        <p>A versatile Discord bot with advanced auto-moderation over 50 commands active in 68 servers! Coded in Node.js.</p>
+                    </div>
+                    
+                    <div class="project-item" style="--order: 1;">
+                        <h4>Portfolio Website</h4>
+                        <p>This very website used advanced and moderm web design technologies and was coded in various languages and frameworks including HTML, JavaScript, CSS, React, and more.</p>
+                    </div>
+                    
+                    <div class="project-item" style="--order: 2;">
+                        <h4>Game Automation</h4>
+                        <p>Used Python to make a complex machine learning algorithm as well as image recognition to automate multipe platformer games such as tower of destiny and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section hidden">
+        <div class="content-wrapper">
+            <div class="bubble bubble-skills"></div>
+            <div class="text-box">
+                <h3>Skills</h3>
+                <div class="hover-indicator">
+                    <div class="hover-mouse"></div>
+                    <p>Hover to View Skills</p>
+                </div>
+                <div class="grid-container">
+                    <div class="grid-item" style="--order: 1;">
+                        <div class="content-box">
+                            <h3>Frontend</h3>
+                            <div class="skill-list">
+                                <span><i class="fab fa-html5"></i> HTML5</span>
+                                <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                                <span><i class="fab fa-js"></i> JavaScript</span>
+                                <span><i class="fab fa-react"></i> React</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item" style="--order: 2;">
+                        <div class="content-box">
+                            <h3>Backend</h3>
+                            <div class="skill-list">
+                                <span><i class="fab fa-node-js"></i> Node.js</span>
+                                <span><i class="fab fa-python"></i> Python</span>
+                                <span><i class="fab fa-discord"></i> Discord.js</span>
+                                <span><i class="fas fa-database"></i> SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item" style="--order: 3;">
+                        <div class="content-box">
+                            <h3>Others/Less fluent</h3>
+                            <div class="skill-list">
+                                <span><i class="fas fa-cog"></i> Rust</span>
+                                <span><i class="fab fa-java"></i> Java</span>
+                                <span><i class="fas fa-code"></i> C++</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section hidden">
+        <div class="content-wrapper">
+            <div class="bubble bubble-contact"></div>
+            <div class="text-box">
+                <h3>Contact</h3>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: tbm email here</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-google"></i>
+                        <span>Google Chat: tbm google</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-discord"></i>
+                        <span>Discord: tbm_20</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

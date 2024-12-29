@@ -1,0 +1,22 @@
+.bubble-outline {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--secondary-blue);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    mix-blend-mode: difference;
+}
+
+.bubble-dot {
+    width: 15px;
+    height: 15px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 998;
+    mix-blend-mode: difference;
+    opacity: 0.8;
+} 

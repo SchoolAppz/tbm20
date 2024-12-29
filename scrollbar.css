@@ -1,0 +1,95 @@
+.custom-scrollbar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 12px;
+    height: 100%;
+    background: linear-gradient(180deg, 
+        rgba(26, 35, 126, 0.2) 0%,
+        rgba(79, 195, 247, 0.1) 50%,
+        rgba(26, 35, 126, 0.2) 100%);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border-left: 1px solid rgba(79, 195, 247, 0.1);
+}
+
+.scrollbar-thumb {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    min-height: 50px;
+    background: linear-gradient(90deg, 
+        var(--secondary-blue) 0%,
+        var(--accent-blue) 100%);
+    border-radius: 6px;
+    cursor: grab;
+    box-shadow: 
+        0 0 10px rgba(79, 195, 247, 0.3),
+        inset 0 0 15px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scrollbar-thumb:active {
+    cursor: grabbing;
+    background: linear-gradient(90deg, 
+        var(--accent-blue) 0%,
+        var(--secondary-blue) 100%);
+    box-shadow: 
+        0 0 20px rgba(0, 176, 255, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.scrollbar-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Progress indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-blue);
+    transform-origin: 0%;
+    z-index: 1001;
+    box-shadow: 0 0 10px rgba(0, 176, 255, 0.5);
+}
+
+/* Hide default scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    scrollbar-width: none;
+}
+
+/* Mobile styles */
+@media (hover: none) and (pointer: coarse) {
+    .custom-scrollbar,
+    .scroll-progress {
+        display: none;
+    }
+}
+
+/* Ensure proper layout */
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding-right: 12px;
+    min-height: 100vh;
+} 
